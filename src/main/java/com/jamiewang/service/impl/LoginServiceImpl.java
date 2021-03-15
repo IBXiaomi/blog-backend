@@ -1,13 +1,14 @@
-package com.jamiewang.service.login;
+package com.jamiewang.service.impl;
 
 import com.jamiewang.common.LoginRequest;
 import com.jamiewang.common.admin.Response;
 import com.jamiewang.common.admin.ResponseConstants;
 import com.jamiewang.common.exception.ErrorMessage;
-import org.springframework.stereotype.Component;
+import com.jamiewang.service.LoginService;
+import org.springframework.stereotype.Service;
 
-@Component("loginService")
-public class LoginService {
+@Service
+public class LoginServiceImpl implements LoginService {
 
     public Response loginToSystem(LoginRequest request) {
         Response response = new Response();
