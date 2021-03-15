@@ -3,6 +3,7 @@ package com.jamiewang.service.login;
 import com.jamiewang.common.LoginRequest;
 import com.jamiewang.common.admin.Response;
 import com.jamiewang.common.admin.ResponseConstants;
+import com.jamiewang.service.impl.LoginServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +17,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 public class LoginServiceTest {
 
     @Mock
-    LoginService loginService;
+    LoginServiceImpl loginService;
 
     @InjectMocks
     LoginRequest loginRequest;
