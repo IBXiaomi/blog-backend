@@ -2,10 +2,14 @@ server:
   port: 8090
 spring:
   datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-
-    # H2 database configuration.
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:${halo.work-dir}/db/halo
-    username: admin
-    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.25.128:3306/mysql
+    username: root
+    password: root
+    jpa:
+      hibernate:
+        ddl-auto: update  # create每次运行都删除原有表创建新表,update不用每次创建新表
+      show-sql: true # 打印SQL语句
+logging:
+  config=classpath:logging-config:
+    xml:
