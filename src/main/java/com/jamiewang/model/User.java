@@ -35,13 +35,13 @@ public class User extends BaseEntity {
     /**
      * age
      */
-    @Column(name = "age", nullable = false)
+    @Column(name = "age",nullable = false)
     private int age;
 
     /**
      * sex
      */
-    @Column(name = "sex", length = 30, nullable = false)
+    @Column(name = "sex", length = 30)
     private String sex;
 
     /**
@@ -93,6 +93,11 @@ public class User extends BaseEntity {
 
         if (card == null) {
             card = "";
+        }
+
+
+        if (sex == null) {
+            sex = "";
         }
     }
 }
