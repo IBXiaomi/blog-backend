@@ -19,7 +19,7 @@ import java.util.Date;
 @Table(name = "user_blog")
 @ToString(callSuper = true)
 //@EqualsAndHashCode(callSuper = true)
-public class User extends BaseEntity {
+public class User  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -75,29 +75,29 @@ public class User extends BaseEntity {
     private String card;
 
 
-    @Override
-    public void prePersist() {
-        super.prePersist();
-
-        if (email == null) {
-            email = "";
-        }
-
-        if (telNumber == null) {
-            telNumber = "";
-        }
-
-        if (address == null) {
-            address = "";
-        }
-
-        if (card == null) {
-            card = "";
-        }
-
-
-        if (sex == null) {
-            sex = "";
-        }
-    }
+//    @Override
+//    public void prePersist() {
+//        super.prePersist();
+//
+//        if (email == null) {
+//            email = "";
+//        }
+//
+//        if (telNumber == null) {
+//            telNumber = "";
+//        }
+//
+//        if (address == null) {
+//            address = "";
+//        }
+//
+//        if (card == null) {
+//            card = "";
+//        }
+//
+//
+//        if (sex == null) {
+//            sex = "";
+//        }
+//    }
 }

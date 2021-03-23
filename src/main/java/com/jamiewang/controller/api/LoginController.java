@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
-@RequestMapping("/jamie/login")
+@RequestMapping("/jamie")
 public class LoginController {
 
    private final LoginService loginService;
@@ -17,7 +17,8 @@ public class LoginController {
         this.loginService = loginService;
     }
 
-    @PostMapping("")
+    @PostMapping("/login")
+    @CrossOrigin("http://localhost:8080")
     @ResponseBody
     public Response loginToSystem(@RequestBody LoginRequest request) {
         return loginService.loginToSystem(request);
