@@ -2,7 +2,6 @@ package com.jamiewang.controller.api;
 
 import com.jamiewang.common.LoginRequest;
 import com.jamiewang.common.admin.Response;
-import com.jamiewang.common.exception.ErrorMessage;
 import com.jamiewang.service.LoginService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -25,9 +24,4 @@ public class LoginController {
         return loginService.loginToSystem(request);
     }
 
-    @GetMapping("/test")
-    @ResponseBody
-    public Response testCROS() {
-        return new Response("200", "success", new ErrorMessage());
-    }
 }
